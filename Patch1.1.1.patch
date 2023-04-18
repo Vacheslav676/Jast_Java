@@ -1,0 +1,16 @@
+Index: app/src/main/java/android/example/jastjava/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/android/example/jastjava/MainActivity.java b/app/src/main/java/android/example/jastjava/MainActivity.java
+--- a/app/src/main/java/android/example/jastjava/MainActivity.java	(revision 308121da14327b2b700857fa94469b14eaf62d5e)
++++ b/app/src/main/java/android/example/jastjava/MainActivity.java	(date 1681812157063)
+@@ -19,6 +19,7 @@
+ // делаю второй коммит во вторую ветку
+ // создаю третью ветку.
+ // создаем коммит в 3ей ветке
++// Создаем патч из локальных изменений
+ // Это приложение отображает форму заказа для заказа кофе.
+ public class MainActivity extends AppCompatActivity {
+     int numberOfCoffees = 2;
