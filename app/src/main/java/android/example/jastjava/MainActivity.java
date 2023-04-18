@@ -17,7 +17,8 @@ import java.text.NumberFormat;
 // Это приложение отображает форму заказа для заказа кофе.
 public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 2;
-    int price = 1;
+    int kooficientCeny = 1;
+    int cennik = 50;
     int totalPrice;
 
     @Override
@@ -49,11 +50,13 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantitytextview);
         quantityTextView.setText(AAA + " чашек кофе");
     }
-
+/////////////////////////////////////////////////////////////////////////////////////
     // Этот метод вызывается при нажатии кнопки цены.
     // This metod is called when the PRICE button is clicked.
     public void submitPrice(View view) {
-        displayPrice(++price*50);
+        ++ kooficientCeny;
+
+        displayPrice(kooficientCeny * cennik);
     }
     // Этот метод заполняет окно "ЦЕНА" на экране.
     // This metod displays the given PRICE value on the screen.
@@ -61,10 +64,12 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(price));
     }
-
+//////////////////////////////////////////////////////////////////////////////////////////
     // Этот метод будет обновлять конечное поле с учетом чек бокса
     // При нажатии кнопки Order (Заказать)
     public void orderTotal(View view) {
+
+        totalPrice = cennik * numberOfCoffees * kooficientCeny;
         displayTotalPrice(createOrderSummery(totalPrice, numberOfCoffees, view));
     }
 
