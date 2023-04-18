@@ -15,6 +15,7 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 // Не показывает общую стоимость
 //создаем 2ю ветку
+//делаем комит  создания 2х ветвей
 // Это приложение отображает форму заказа для заказа кофе.
 public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 2;
