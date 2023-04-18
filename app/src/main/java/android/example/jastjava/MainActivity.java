@@ -5,7 +5,7 @@ package android.example.jastjava;
  * Если вы получаете сообщение об ошибке при копировании этого кода в Android studio, обновите его, чтобы оно соответствовало найденному имени пакета
  * в рамках проекта AndroidManifest.xml файл.
  **/
-
+//////
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
