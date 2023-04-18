@@ -16,6 +16,7 @@ import java.text.NumberFormat;
 // Не показывает общую стоимость
 //создаем 2ю ветку
 // создал 2ю ветку
+// делаю второй коммит во вторую ветку
 // Это приложение отображает форму заказа для заказа кофе.
 public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 2;
