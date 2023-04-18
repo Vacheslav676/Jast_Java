@@ -17,6 +17,7 @@ import java.text.NumberFormat;
 //создаем 2ю ветку
 // создал 2ю ветку
 // делаю второй коммит во вторую ветку
+// делаем комит во вторую ветвь после создания 3ей ветви
 // Это приложение отображает форму заказа для заказа кофе.
 public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 2;
