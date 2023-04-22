@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    //Создаем переменную и привязываем ее к текст вью
+    //Создаем переменную и привязываем ее к текст вью.
     // Внимание!: тут название переменной и название текствью совпадают
     //TextView quantitytextview = (TextView) findViewById(R.id.quantitytextview);
 
