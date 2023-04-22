@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     int kooficientCeny = 1;
     int cennik = 50;
     int totalPrice;
-    private Toast trueToast;
-    private Toast falseToast;
+    private Toast plusToast;
+    private Toast minusToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,19 +42,28 @@ public class MainActivity extends AppCompatActivity {
     // Этот метод вызывается при нажатии кнопки " + "..
     // This metod is called when the " + " button is clicked.
     public void submitOrder(View view) {
-          display(++numberOfCoffees);
-          trueToast = Toast.makeText(getBaseContext(), "+ 1 чашка", Toast.LENGTH_SHORT);
-          trueToast.show();
+        if (numberOfCoffees >= 99) {
+            plusToast = Toast.makeText(getBaseContext(),
+                    "нельзя заказать более 99 кофе", Toast.LENGTH_SHORT);
+            plusToast.show();
+        }else {
+          display(++numberOfCoffees);}
+
     }
     // Этот метод вызывается при нажатии кнопки " - ".
     public void submitOrder2(View view) {
-        display(--numberOfCoffees);
+        if(numberOfCoffees <= 1) {
+            minusToast = Toast.makeText(getBaseContext(),
+                    "нельзя заказать меньше 1 чашки", Toast.LENGTH_SHORT);
+            minusToast.show();
+        } else {
+        display(--numberOfCoffees); }
     }
 
     // Этот метод Заполняет окно "Количество" на экране.
     private void display(int AAA) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantitytextview);
-        quantityTextView.setText(AAA + " чашек кофе");
+        quantityTextView.setText(AAA + " чаш. кофе");
     }
 /////////////////////////////////////////////////////////////////////////////////////
     // Этот метод вызывается при нажатии кнопки цены.

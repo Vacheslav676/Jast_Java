@@ -66,7 +66,7 @@
 
                 <TextView
                     android:id="@+id/quantitytextview"
-                    android:layout_width="17dp"
+                    android:layout_width="119dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="26dp"
                     android:ems="10"
