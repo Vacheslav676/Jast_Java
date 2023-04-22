@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-111dp">
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,6 +31,38 @@
                 android:ems="5"
                 android:inputType="textPersonName"
                 android:text="Name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="1dp"
+                android:text="TOPPING"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateIds" />
+
+            <CheckBox
+                android:id="@+id/checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="26dp"
+                android:text="Whipped cream"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <CheckBox
+                android:id="@+id/checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="26dp"
+                android:text="Chocolate"
+                android:textAppearance="?android:textAppearanceMedium" />
 
 
             <TextView
@@ -66,7 +98,7 @@
 
                 <TextView
                     android:id="@+id/quantitytextview"
-                    android:layout_width="119dp"
+                    android:layout_width="43dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="26dp"
                     android:ems="10"
@@ -106,24 +138,6 @@
                 android:onClick="submitPrice"
                 android:text="Price"
                 app:backgroundTint="@color/teal_200" />
-
-            <CheckBox
-                android:id="@+id/checkbox1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="26dp"
-                android:text="Whipped cream"
-                android:textAppearance="?android:textAppearanceMedium" />
-
-            <CheckBox
-                android:id="@+id/checkbox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="26dp"
-                android:text="Chocolate"
-                android:textAppearance="?android:textAppearanceMedium" />
 
 
             <EditText

@@ -39,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
     // но нужно преобразовать из текста в число из текст quantitytextview
    //  long defNumbCoff = Long.parseLong(quantitytextview.getText().toString());
 
+    //////////////////////////////////////////////////////////////////////
+    // Метод создания отдельной переменной для чек бокса
+    // хотя в чекбоксе есть встроенная переменная
+    public boolean onCheckBoxClicked(View view) {
+        CheckBox checkBox11 = findViewById(R.id.checkbox1);
+        boolean isCheckBox11 = checkBox11.isChecked();
+        return isCheckBox11;
+    }
+
+    public boolean onCheckBoxClicked2(View view) {
+        CheckBox checkBox22 = findViewById(R.id.checkbox2);
+        boolean isCheckBox22 = checkBox22.isChecked();
+        return isCheckBox22;
+    }
+ /////////////////////////////////////////////////////////////////////////
+
     // Этот метод вызывается при нажатии кнопки " + "..
     // This metod is called when the " + " button is clicked.
     public void submitOrder(View view) {
@@ -65,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantitytextview);
         quantityTextView.setText(AAA + " чаш. кофе");
     }
-/////////////////////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////
     // Этот метод вызывается при нажатии кнопки цены.
     // This metod is called when the PRICE button is clicked.
     public void submitPrice(View view) {
@@ -79,12 +96,20 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(price));
     }
+
 //////////////////////////////////////////////////////////////////////////////////////////
     // Этот метод будет обновлять конечное поле с учетом чек бокса
     // При нажатии кнопки Order (Заказать)
+    // сумма по чеку = (ценник за чашку + шоколад + сливки) * количество чашек
+    // ценник же = ценник за кофе + ценник за шокол + ценник за сливки
     public void orderTotal(View view) {
+        // Если проверка 1го чекбокса = true, то ценник увеличивается на 20
+       if (onCheckBoxClicked(view)) cennik +=20;
+       // шоколад по 20 и сливки по 15
+       if (onCheckBoxClicked2(view)) cennik +=15;
 
-        totalPrice = cennik * numberOfCoffees * kooficientCeny;
+
+        totalPrice = (cennik * kooficientCeny) * numberOfCoffees;
         displayTotalPrice(createOrderSummery(totalPrice, numberOfCoffees, view));
     }
 
@@ -104,20 +129,6 @@ public class MainActivity extends AppCompatActivity {
         message += "\nЦена: " + totalPrice + " рублей";
         message += "\nСпасибо!";
         return message;
-    }
-//////////////////////////////////////////////////////////////////////
-    // Метод создания отдельной переменной для чек бокса
-    // хотя в чекбоксе есть встроенная переменная
-    public boolean onCheckBoxClicked(View view) {
-        CheckBox checkBox11 = findViewById(R.id.checkbox1);
-        boolean isCheckBox11 = checkBox11.isChecked();
-        return isCheckBox11;
-    }
-
-    public boolean onCheckBoxClicked2(View view) {
-        CheckBox checkBox22 = findViewById(R.id.checkbox2);
-        boolean isCheckBox22 = checkBox22.isChecked();
-        return isCheckBox22;
     }
 
 }
