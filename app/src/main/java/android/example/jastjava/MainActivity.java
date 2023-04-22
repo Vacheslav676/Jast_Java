@@ -33,12 +33,18 @@ public class MainActivity extends AppCompatActivity {
         // в активити2
         Intent i = new Intent(MainActivity.this, Activity2.class);
 
+        // Отправим данные
+        // Отправляем данные с ключевыми словами
+        i.putExtra("key_1", "Привет");
+        i.putExtra("key_2", 100);
+        i.putExtra("key_3", true);
+
+
+
         //специальная функция для старта интента. После нее текущая активити
         // не закрывается, а сворачивается
         startActivity(i);
 
-        //Сделал простейшие кнопки для перехода по активностям.
-        // Но каждая предыдущая активити будет висеть в буфере и в истории.
     }
 
 
