@@ -18,6 +18,22 @@ public class Activity3 extends AppCompatActivity {
     public void onClick3(View view) {
         Intent i = new Intent(Activity3.this, MainActivity.class);
         startActivity(i);
+        //Чтобы после перехода не свернуть окно а закрыть делаем финиш
+        // Но если будешь ждать на этой активити ответ, то финишь помешает
+        finish();
+
+    }
+
+    // Поэтому закрытие вкладки (финиш) назначим на кнопку "назад" смартфона
+    // добавляем слушателя кнопки "назад" на смартфоне
+    @Override
+    public void onBackPressed(){
+        //Если убрать "супер" то на этой страничке кнопка
+        // "назад" работать не будет
+        // super.onBackPressed();
+
+        //Заменим стандартное действие кнопки "назад" на действие "финиш"
+        finish();
 
     }
 }

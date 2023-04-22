@@ -39,8 +39,13 @@ public class MainActivity extends AppCompatActivity {
 
         //Сделал простейшие кнопки для перехода по активностям.
         // Но каждая предыдущая активити будет висеть в буфере и в истории.
+    }
 
 
+        // коментарии на Активити3 джава
+        @Override
+        public void onBackPressed(){
+            finish();
+        }
 
     }
-}

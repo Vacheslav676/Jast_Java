@@ -21,4 +21,11 @@ public class Activity2 extends AppCompatActivity {
 
     }
 
+    // коментарии на Активити3 джава
+    @Override
+    public void onBackPressed(){
+        finish();
+
+    }
+
 }
