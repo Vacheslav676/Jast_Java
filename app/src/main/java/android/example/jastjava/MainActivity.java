@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.text.NumberFormat;
 
 // Это приложение отображает форму заказа для заказа кофе.
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     int kooficientCeny = 1;
     int cennik = 50;
     int totalPrice;
+    private Toast trueToast;
+    private Toast falseToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     // This metod is called when the " + " button is clicked.
     public void submitOrder(View view) {
           display(++numberOfCoffees);
+          trueToast = Toast.makeText(getBaseContext(), "+ 1 чашка", Toast.LENGTH_SHORT);
+          trueToast.show();
     }
     // Этот метод вызывается при нажатии кнопки " - ".
     public void submitOrder2(View view) {
