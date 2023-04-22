@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="132dp"
-        android:onClick="onClick21"
+        android:onClick="onClick2"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,6 @@
         android:layout_marginTop="152dp"
         android:text="Активити 2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bi1as="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

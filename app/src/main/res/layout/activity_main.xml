@@ -26,7 +26,6 @@
         android:layout_marginTop="152dp"
         android:text="Активити Майн xml"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bi1as="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
