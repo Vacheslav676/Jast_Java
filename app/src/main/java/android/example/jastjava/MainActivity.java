@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     //TextView quantitytextview = (TextView) findViewById(R.id.quantitytextview);
 
     // Создадим переменную чтобы задавать начальное количество чашек кофе из
-    // текстового поля quantitytextview
+    // текстового поля quantitytextview.
     // но нужно преобразовать из текста в число из текст quantitytextview
    //  long defNumbCoff = Long.parseLong(quantitytextview.getText().toString());
 
