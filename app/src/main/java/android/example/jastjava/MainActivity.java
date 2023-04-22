@@ -7,6 +7,8 @@ package android.example.jastjava;
  **/
 //////
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -27,6 +29,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick1(View view) {
+        // Создаю интент и говорю что хочу перейти из этого (this) активити,
+        // в активити2
+        Intent i = new Intent(MainActivity.this, Activity2.class);
+
+        //специальная функция для старта интента. После нее текущая активити
+        // не закрывается, а сворачивается
+        startActivity(i);
+
+        //Сделал простейшие кнопки для перехода по активностям.
+        // Но каждая предыдущая активити будет висеть в буфере и в истории.
+
 
 
     }
