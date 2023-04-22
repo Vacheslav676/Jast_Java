@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     // но нужно преобразовать из текста в число из текст quantitytextview
    //  long defNumbCoff = Long.parseLong(quantitytextview.getText().toString());
 
-    // Этот метод вызывается при нажатии кнопки " + ".
+    // Этот метод вызывается при нажатии кнопки " + "..
     // This metod is called when the " + " button is clicked.
     public void submitOrder(View view) {
           display(++numberOfCoffees);
