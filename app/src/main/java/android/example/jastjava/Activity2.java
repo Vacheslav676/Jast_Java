@@ -15,7 +15,7 @@ public class Activity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
 
-        //Получаем данные из МайнАктивитиДжава
+        //Получаем данные из МайнАктивитиДжава.
         Intent i = getIntent();
         // Проверяем пришло ли сообщения, а то может там пусто
         if(i != null)
