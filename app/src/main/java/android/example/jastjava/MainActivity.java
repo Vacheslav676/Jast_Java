@@ -18,8 +18,6 @@ import android.widget.Toast;
 
 import java.text.NumberFormat;
 
-// Ссылка на ютуб урок
-// https://www.youtube.com/watch?v=lyGGar6U-HY
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -29,29 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick1(View view) {
-        // Создаю интент и говорю что хочу перейти из этого (this) активити,
-        // в активити2
-        Intent i = new Intent(MainActivity.this, Activity2.class);
-
-        // Отправим данные
-        // Отправляем данные с ключевыми словами
-        i.putExtra("key_1", "Привет");
-        i.putExtra("key_2", 100);
-        i.putExtra("key_3", true);
-
-
-
-        //специальная функция для старта интента. После нее текущая активити
-        // не закрывается, а сворачивается
-        startActivity(i);
 
     }
 
-
-        // коментарии на Активити3 джава
-        @Override
-        public void onBackPressed(){
-            finish();
-        }
 
     }
