@@ -19,8 +19,9 @@ import java.text.NumberFormat;
 // Это приложение отображает форму заказа для заказа кофе.
 public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 2;
-    int kooficientCeny = 1;
     int cennik = 50;
+    int cennikChokolad;
+    int cennikCream;
     int totalPrice;
     private Toast plusToast;
     private Toast minusToast;
@@ -45,12 +46,20 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCheckBoxClicked(View view) {
         CheckBox checkBox11 = findViewById(R.id.checkbox1);
         boolean isCheckBox11 = checkBox11.isChecked();
+       // Если чекбокс истина то ценник за шоколад 20
+        if (isCheckBox11) {cennikChokolad = 20;
+        }else {cennikChokolad = 0;}// иначе 0
         return isCheckBox11;
     }
 
     public boolean onCheckBoxClicked2(View view) {
         CheckBox checkBox22 = findViewById(R.id.checkbox2);
         boolean isCheckBox22 = checkBox22.isChecked();
+        // Если чекбокс истина то ценник за сливки 15
+        if (isCheckBox22) {
+            cennikCream = 15; // иначе 0
+        }else {cennikCream = 0;}
+
         return isCheckBox22;
     }
  /////////////////////////////////////////////////////////////////////////
@@ -82,24 +91,6 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText(AAA + " чаш. кофе");
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////
-    // Этот метод вызывается при нажатии кнопки цены.
-    // This metod is called when the PRICE button is clicked.
-    public void submitPrice(View view) {
-        // Если проверка 1го чекбокса = true, то ценник увеличивается на 20
-        if (onCheckBoxClicked(view)) cennik +=20;
-        // шоколад по 20 и сливки по 15
-        if (onCheckBoxClicked2(view)) cennik +=15;
-        // но если нажать "Заказать" несколько раз то ценник всё растет!(
-
-        displayPrice(cennik);
-    }
-    // Этот метод заполняет окно "ЦЕНА" на экране.
-    // This metod displays the given PRICE value on the screen.
-    private void displayPrice(int price) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(price));
-    }
 
 //////////////////////////////////////////////////////////////////////////////////////////
     // Этот метод будет обновлять конечное поле с учетом чек бокса
@@ -108,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     // ценник же = ценник за кофе + ценник за шокол + ценник за сливки
     public void orderTotal(View view) {
 
-        totalPrice = (cennik) * numberOfCoffees;
+        totalPrice = (cennik + cennikChokolad + cennikCream) * numberOfCoffees;
         displayTotalPrice(createOrderSummery(totalPrice, numberOfCoffees, view));
     }
 

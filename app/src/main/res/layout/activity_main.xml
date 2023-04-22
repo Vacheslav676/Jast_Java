@@ -98,12 +98,12 @@
 
                 <TextView
                     android:id="@+id/quantitytextview"
-                    android:layout_width="43dp"
+                    android:layout_width="119dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="26dp"
                     android:ems="10"
                     android:inputType="numberDecimal"
-                    android:text="2"
+                    android:text="2 чаш. кофе"
                     android:textSize="20sp" />
 
                 <Button
@@ -117,27 +117,6 @@
                     app:backgroundTint="@color/teal_200" />
 
             </LinearLayout>
-
-            <EditText
-                android:id="@+id/price_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="46dp"
-                android:layout_marginBottom="6dp"
-                android:ems="5"
-                android:inputType="textPersonName"
-                android:text="50" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="16dp"
-                android:onClick="submitPrice"
-                android:text="Price"
-                app:backgroundTint="@color/teal_200" />
 
 
             <EditText
