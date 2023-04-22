@@ -3,6 +3,7 @@ package android.example.jastjava;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class Activity3 extends AppCompatActivity {
 
@@ -10,5 +11,10 @@ public class Activity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
+    }
+
+    public void onClick3(View view) {
+
+
     }
 }

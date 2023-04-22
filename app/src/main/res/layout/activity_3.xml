@@ -8,11 +8,11 @@
     tools:context=".Activity3">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="132dp"
-        android:onClick="onClick1"
+        android:onClick="onClick2"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
