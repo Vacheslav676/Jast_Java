@@ -53,6 +53,7 @@
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="26dp"
                 android:text="Whipped cream"
+                android:onClick="onCheckBoxClicked"
                 android:textAppearance="?android:textAppearanceMedium" />
 
             <CheckBox
@@ -62,6 +63,7 @@
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="26dp"
                 android:text="Chocolate"
+                android:onClick="onCheckBoxClicked2"
                 android:textAppearance="?android:textAppearanceMedium" />
 
 
