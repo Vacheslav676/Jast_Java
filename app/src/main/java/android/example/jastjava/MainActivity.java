@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import java.text.NumberFormat;
 
-// Это приложение отображает форму заказа для заказа кофе.
 public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 2;
     int cennik = 50;
@@ -40,9 +39,7 @@ public class MainActivity extends AppCompatActivity {
     // но нужно преобразовать из текста в число из текст quantitytextview
    //  long defNumbCoff = Long.parseLong(quantitytextview.getText().toString());
 
-    //////////////////////////////////////////////////////////////////////
-    // Метод создания отдельной переменной для чек бокса
-    // хотя в чекбоксе есть встроенная переменная
+    // метод чекбокса
     public boolean onCheckBoxClicked(View view) {
         CheckBox checkBox11 = findViewById(R.id.checkbox1);
         boolean isCheckBox11 = checkBox11.isChecked();
@@ -56,13 +53,10 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBox22 = findViewById(R.id.checkbox2);
         boolean isCheckBox22 = checkBox22.isChecked();
         // Если чекбокс истина то ценник за сливки 15
-        if (isCheckBox22) {
-            cennikCream = 15; // иначе 0
+        if (isCheckBox22) {cennikCream = 15; // иначе 0
         }else {cennikCream = 0;}
-
         return isCheckBox22;
     }
- /////////////////////////////////////////////////////////////////////////
 
     // Этот метод вызывается при нажатии кнопки " + "..
     // This metod is called when the " + " button is clicked.
@@ -90,10 +84,6 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantitytextview);
         quantityTextView.setText(AAA + " чаш. кофе");
     }
-
-
-//////////////////////////////////////////////////////////////////////////////////////////
-    // Этот метод будет обновлять конечное поле с учетом чек бокса
     // При нажатии кнопки Order (Заказать)
     // сумма по чеку = (ценник за чашку + шоколад + сливки) * количество чашек
     // ценник же = ценник за кофе + ценник за шокол + ценник за сливки
@@ -104,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Этот метод заполняет окно тоталПрайс на экране.
-    // This metod displays the given PRICE value on the screen.
     private void displayTotalPrice(String message) {
         TextView totalPriceTextView = (TextView) findViewById(R.id.totalPrice_text_view);
         totalPriceTextView.setText(message);
@@ -120,5 +109,4 @@ public class MainActivity extends AppCompatActivity {
         message += "\nСпасибо!";
         return message;
     }
-
 }
