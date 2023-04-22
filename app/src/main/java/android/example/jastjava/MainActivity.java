@@ -86,9 +86,13 @@ public class MainActivity extends AppCompatActivity {
     // Этот метод вызывается при нажатии кнопки цены.
     // This metod is called when the PRICE button is clicked.
     public void submitPrice(View view) {
-        ++ kooficientCeny;
+        // Если проверка 1го чекбокса = true, то ценник увеличивается на 20
+        if (onCheckBoxClicked(view)) cennik +=20;
+        // шоколад по 20 и сливки по 15
+        if (onCheckBoxClicked2(view)) cennik +=15;
+        // но если нажать "Заказать" несколько раз то ценник всё растет!(
 
-        displayPrice(kooficientCeny * cennik);
+        displayPrice(cennik);
     }
     // Этот метод заполняет окно "ЦЕНА" на экране.
     // This metod displays the given PRICE value on the screen.
@@ -103,13 +107,8 @@ public class MainActivity extends AppCompatActivity {
     // сумма по чеку = (ценник за чашку + шоколад + сливки) * количество чашек
     // ценник же = ценник за кофе + ценник за шокол + ценник за сливки
     public void orderTotal(View view) {
-        // Если проверка 1го чекбокса = true, то ценник увеличивается на 20
-       if (onCheckBoxClicked(view)) cennik +=20;
-       // шоколад по 20 и сливки по 15
-       if (onCheckBoxClicked2(view)) cennik +=15;
 
-
-        totalPrice = (cennik * kooficientCeny) * numberOfCoffees;
+        totalPrice = (cennik) * numberOfCoffees;
         displayTotalPrice(createOrderSummery(totalPrice, numberOfCoffees, view));
     }
 
