@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         display(--numberOfCoffees); }
     }
 
-    // Этот метод Заполняет окно "Количество" на экране.
+    // Этот метод Заполняет окно "Количество" на экране
     private void display(int AAA) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantitytextview);
         quantityTextView.setText(AAA + " чаш. кофе");
