@@ -9,8 +9,10 @@ package android.example.jastjava;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,38 +22,48 @@ import java.text.NumberFormat;
 
 // Ссылка на ютуб урок
 // https://www.youtube.com/watch?v=lyGGar6U-HY
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Button btnWeb;
+    Button btnMap;
+    Button btnCall;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnWeb = (Button) findViewById(R.id.btnWeb);
+        btnMap = (Button) findViewById(R.id.btnMap);
+        btnCall = (Button) findViewById(R.id.btnCall);
+
+        btnWeb.setOnClickListener(this);
+        btnMap.setOnClickListener(this);
+        btnCall.setOnClickListener(this);
     }
 
-    public void onClick1(View view) {
-        // Создаю интент и говорю что хочу перейти из этого (this) активити,
-        // в активити2
-        Intent i = new Intent(MainActivity.this, Activity2.class);
+    @Override
+    public void onClick(View v) {
 
-        // Отправим данные
-        // Отправляем данные с ключевыми словами
-        i.putExtra("key_1", "Привет");
-        i.putExtra("key_2", 100);
-        i.putExtra("key_3", true);
-
-
-
-        //специальная функция для старта интента. После нее текущая активити
-        // не закрывается, а сворачивается
-        startActivity(i);
-
-    }
-
-
-        // коментарии на Активити3 джава
-        @Override
-        public void onBackPressed(){
-            finish();
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.btnWeb:
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://developer.android.com"));
+                startActivity(intent);
+                break;
+            case R.id.btnMap:
+                intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("geo:-0.45609946,-90.26607513"));
+                startActivity(intent);
+                break;
+            case R.id.btnCall:
+                intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:12345"));
+                startActivity(intent);
+                break;
         }
 
     }
+
+}
